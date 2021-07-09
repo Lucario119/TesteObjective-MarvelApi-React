@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'PT Sans';
+  color: var(--dark-smoke);
+  border: none;
+  outline: none;
+}
+html,
+body {
+  background-color: var(--dark-snow);
+  max-width: 100vw;
+  max-height: 100vh;
+  width: 100%;
+  height: 100%;
+}
+ul {
+  list-style: none;
+}
+:root {
+  --white: #ffffff;
+  --dark-snow: #e5e5e5;
+  --smoke: #8e8e8e;
+  --dark-smoke: #555555;
+  --dark-blue: #167abc;
+}

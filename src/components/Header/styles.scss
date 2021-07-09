@@ -1,0 +1,50 @@
+$font: 'PT Sans Caption';
+#header {
+  width: 100%;
+}
+.header_content {
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--white);
+  padding: 0 0.5rem;
+  width: 100%;
+  @media (max-width: 480px) {
+    width: 120%;
+  }
+}
+.header_texts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    @media (max-width: 480px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  > strong {
+    font-family: 'PT Sans Caption';
+  }
+  > span {
+    font-family: $font;
+  }
+  > button {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 1rem;
+    font-family: $font;
+    font-weight: 700;
+    font-size: 2ch;
+    &:hover {
+      background-color: black;
+      color: var(--white);
+    }
+  }
+}

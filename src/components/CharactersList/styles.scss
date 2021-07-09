@@ -1,0 +1,115 @@
+#page_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.container_charactersList {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.characters-grid {
+  display: grid;
+  grid-template-columns: 32rem 32rem 32rem;
+  grid-template-rows: 1fr 1fr 1fr;
+  column-gap: 1rem;
+  gap: 4px;
+
+  @media (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5rem;
+    width: 100%;
+  }
+}
+.loading {
+  font-size: 3ch;
+  height: 24.55rem;
+}
+.container_search_character {
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 480px) {
+    align-items: center;
+    justify-content: center;
+  }
+  > h1 {
+    font: 'PT Sans Caption' 700;
+    // align-self: flex-start;
+    margin-bottom: 0.5rem;
+
+    &:first-child {
+      font-size: 5.5ch;
+      margin-bottom: 1rem;
+      @media (max-width: 480px) {
+        font-size: 4ch;
+        flex-shrink: 1;
+      }
+      @media (max-width: 380px) {
+        font-size: 3ch;
+      }
+    }
+    @media (max-width: 480px) {
+      font-size: 16.4pt;
+      align-self: center;
+    }
+  }
+}
+.search-wrapper {
+  align-self: flex-start;
+  height: auto;
+  width: 31%;
+  @media (max-width: 480px) {
+    align-self: center;
+    justify-content: center;
+    width: 327pt;
+  }
+  > input {
+    width: 85%;
+    height: 2.5rem;
+    position: relative;
+    border: 1px solid var(--dark-snow);
+    font: 17px var(--dark-smoke);
+    @media (max-width: 480px) {
+      width: 340pt;
+    }
+    &::placeholder {
+      font-style: italic;
+      padding-left: 1rem;
+      font-size: 17px;
+      color: var(--smoke);
+    }
+  }
+  > img {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 7.8rem;
+    left: 23.3%;
+    z-index: 1;
+    color: var(--smoke);
+    @media (max-width: 480px) {
+      top: 6.6rem;
+      left: 101%;
+    }
+  }
+}
+.characterCard_container {
+  margin-top: 10px;
+
+  width: 100%;
+}
+.search_characters_wrapper {
+  width: 84.8vw;
+  height: 2rem;
+  position: relative;
+  top: -10rem;
+  @media (max-width: 480px) {
+    margin-left: 4.5rem;
+  }
+}

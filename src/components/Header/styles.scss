@@ -24,17 +24,19 @@ $font: 'PT Sans Caption';
     align-items: center;
     justify-content: center;
     gap: 1px;
+    > strong {
+      font-family: $font;
+    }
+    > span {
+      font-family: $font;
+      margin-left: 3px;
+    }
     @media (max-width: 480px) {
       display: flex;
       flex-direction: column;
     }
   }
-  > strong {
-    font-family: 'PT Sans Caption';
-  }
-  > span {
-    font-family: $font;
-  }
+
   > button {
     width: 2rem;
     height: 2rem;

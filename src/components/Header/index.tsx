@@ -6,7 +6,7 @@ export const Header: React.FC = () => {
   return (
     <header id="header">
       <div className="header_content">
-        <Link to="/" style={{ textDecoration: 'none' }}>
+        <Link to="/">
           <h1>Objective</h1>
         </Link>
 

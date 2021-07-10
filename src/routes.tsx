@@ -8,7 +8,7 @@ const Routes: React.FC = () => {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={FirstPage} />
-        <Route path="/characterdetail" component={CharacterDetailPage} />
+        <Route path="/characterdetail/:id" component={CharacterDetailPage} />
       </Switch>
     </BrowserRouter>
   );

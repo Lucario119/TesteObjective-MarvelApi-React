@@ -4,9 +4,7 @@ import { ReactComponent as LeftArrowIcon } from '../../assets/left-arrow-svgrepo
 import { ReactComponent as DoubleLeftArrowIcon } from '../../assets/chevron-double-left-svgrepo-com.svg';
 import { ReactComponent as DoubleRightArrowIcon } from '../../assets/chevron-double-right-svgrepo-com.svg';
 import './styles.scss';
-import { useState } from 'react';
 
-// const maxItems = 5;
 const currentItem = 1;
 
 type PaginationMathProps = {
@@ -22,18 +20,19 @@ export const SelectPages: React.FC<PaginationMathProps> = ({
   total,
   setOffset,
 }) => {
-  const [numItems, setNumItems] = useState(5);
+  let maxItems = 5;
 
-  const maxLeft = (numItems - currentItem) / 2;
+  const maxLeft = (maxItems - currentItem) / 2;
 
   const currentPage = offset ? offset / limit + 1 : 1;
   const countPages = Math.ceil(total / limit);
   const firstPage = Math.max(currentPage - maxLeft, 1);
 
-  // if (window.matchMedia('max-width: 480px')) {
-  //   If media query matches'#000';
-  // }
-  //   document.body.style.backgroundColor =
+  if (window.matchMedia('(max-width: 480px)').matches) {
+    maxItems = 3;
+  } else {
+    maxItems = 5;
+  }
 
   return (
     <footer id="container_pagination">
@@ -45,6 +44,7 @@ export const SelectPages: React.FC<PaginationMathProps> = ({
                 <DoubleLeftArrowIcon />
               </button>
             </li>
+
             <li>
               <button
                 className="go_back"
@@ -56,7 +56,7 @@ export const SelectPages: React.FC<PaginationMathProps> = ({
           </>
         )}
 
-        {Array.from({ length: Math.min(numItems, countPages) })
+        {Array.from({ length: Math.min(maxItems, countPages) })
           .map((_, index) => index + firstPage)
           .map((page) => (
             <li key={page} className="number_buttons">

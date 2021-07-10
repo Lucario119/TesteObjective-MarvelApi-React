@@ -25,6 +25,7 @@
     justify-content: center;
     margin-left: 5rem;
     width: 100%;
+    gap: 1rem;
   }
 }
 .loading {
@@ -39,8 +40,8 @@
     justify-content: center;
   }
   > h1 {
-    font: 'PT Sans Caption' 700;
-    // align-self: flex-start;
+    font-family: 'PT Sans Caption';
+    
     margin-bottom: 0.5rem;
 
     &:first-child {
@@ -113,3 +114,4 @@
     margin-left: 4.5rem;
   }
 }
+

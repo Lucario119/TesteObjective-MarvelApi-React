@@ -41,7 +41,7 @@
   }
   > h1 {
     font-family: 'PT Sans Caption';
-    
+
     margin-bottom: 0.5rem;
 
     &:first-child {
@@ -100,6 +100,42 @@
     }
   }
 }
+.explication_row {
+  display: flex;
+  width: 84.6%;
+
+  margin-bottom: 2px;
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    > span {
+      color: var(--smoke);
+      font-size: 14px;
+      &:first-child {
+        margin-right: 8rem;
+      }
+      &:last-child {
+        margin-right: 13rem;
+        @media (max-width: 480px) {
+          display: none;
+        }
+      }
+    }
+  }
+  .div_two {
+    @media (max-width: 480px) {
+      display: none;
+    }
+  }
+  .div_three {
+    @media (max-width: 480px) {
+      display: none;
+    }
+  }
+}
 .characterCard_container {
   margin-top: 10px;
 
@@ -107,11 +143,10 @@
 }
 .search_characters_wrapper {
   width: 84.8vw;
-  height: 2rem;
+  height: 1rem;
   position: relative;
   top: -10rem;
   @media (max-width: 480px) {
     margin-left: 4.5rem;
   }
 }
-

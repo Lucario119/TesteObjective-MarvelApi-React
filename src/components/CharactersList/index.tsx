@@ -69,50 +69,63 @@ export const CharactersList: React.FC = () => {
           )}
         </div>
 
-        {search === '' && (
-          <div
-            className="container_charactersList"
-            style={{ display: submitForm ? 'none' : '' }}
-          >
-            {isLoading ? (
-              <div className="loading">Loading...</div>
-            ) : (
-              <div className="characters-grid">
-                {characters.length > 0 &&
-                  characters.map((character) => (
-                    <Link to={`/characterdetail/${character.id}`}>
-                      <CharacterCard
-                        key={character.id}
-                        id={character.id}
-                        name={character.name}
-                        image={`${character.thumbnail.path}/standard_fantastic.${character.thumbnail.extension}`}
-                        series={
-                          character.description ? (
-                            character.description.substr(0, 218)
-                          ) : (
-                            <span>
-                              Infelizmente este personagem não tem descrição
-                              disponível
-                            </span>
-                          )
-                        }
-                      />
-                    </Link>
-                  ))}
-              </div>
-            )}
-
-            {requestInfo && (
-              <SelectPages
-                key={limit}
-                limit={limit}
-                total={requestInfo.total}
-                offset={offset}
-                setOffset={setOffset}
-              />
-            )}
+        <div className="explication_row">
+          <div className="div_one">
+            <span>Personagem</span>
+            <span>Descrição</span>
           </div>
-        )}
+          <div className="div_two">
+            <span>Personagem</span>
+            <span>Descrição</span>
+          </div>
+          <div className="div_three">
+            <span>Personagem</span>
+            <span>Descrição</span>
+          </div>
+        </div>
+
+        <div
+          className="container_charactersList"
+          style={{ display: submitForm ? 'none' : '' }}
+        >
+          {isLoading ? (
+            <div className="loading">Loading...</div>
+          ) : (
+            <div className="characters-grid">
+              {characters.length > 0 &&
+                characters.map((character) => (
+                  <Link to={`/characterdetail/${character.id}`}>
+                    <CharacterCard
+                      key={character.id}
+                      id={character.id}
+                      name={character.name}
+                      image={`${character.thumbnail.path}/standard_fantastic.${character.thumbnail.extension}`}
+                      series={
+                        character.description ? (
+                          character.description.substr(0, 218)
+                        ) : (
+                          <span>
+                            Infelizmente este personagem não tem descrição
+                            disponível
+                          </span>
+                        )
+                      }
+                    />
+                  </Link>
+                ))}
+            </div>
+          )}
+
+          {requestInfo && (
+            <SelectPages
+              key={limit}
+              limit={limit}
+              total={requestInfo.total}
+              offset={offset}
+              setOffset={setOffset}
+            />
+          )}
+        </div>
       </div>
     </>
   );

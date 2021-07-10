@@ -7,7 +7,7 @@ export const FirstPage: React.FC = () => {
   return (
     <div id="container">
       <Header />
-
+     
       <section className="characters_list_wrapper">
         <CharactersList />
       </section>

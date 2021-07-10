@@ -36,8 +36,7 @@
 .series {
   display: flex;
   flex-direction: column;
-  white-space: pre-wrap;
-  margin-left: 1rem;
+
   @media (max-width: 480px) {
     display: none;
   }
@@ -49,10 +48,8 @@
 .events {
   display: flex;
   flex-direction: column;
-  white-space: pre-wrap;
-  margin-right: 0.5rem;
+
   @media (max-width: 480px) {
     display: none;
   }
 }
-

@@ -10,3 +10,6 @@ Instalar as dependencias do projeto.
 
 Rodar o projeto:
 ### `yarn start`
+
+Coloque suas credenciais Marvel nos pontos com process.env
+
